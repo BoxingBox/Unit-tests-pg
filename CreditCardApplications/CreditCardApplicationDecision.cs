@@ -6,7 +6,5 @@
         AutoAccepted,
         AutoDeclined,
         ReferredToHuman
-
-            //asdasd
     }
 }
