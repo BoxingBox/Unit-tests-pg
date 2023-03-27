@@ -35,8 +35,23 @@ namespace CreditCardApplications.Tests
 
         }
 
-         
-        
+        [Fact]
+        public void ReferYoungApplicationsDuplicate()
+        {
+            Mock<IFrequentFlyerNumberValidator> mockValidator =
+                new Mock<IFrequentFlyerNumberValidator>();
+
+            var sut = new CreditCardApplicationEvaluator(mockValidator.Object);
+            var application = new CreditCardApplication { Age = 11 };
+
+            CreditCardApplicationDecision decision = sut.Evaluate(application);
+
+            Assert.Equal(CreditCardApplicationDecision.ReferredToHuman, decision);
+
+        }
+
+
+
 
 
 
