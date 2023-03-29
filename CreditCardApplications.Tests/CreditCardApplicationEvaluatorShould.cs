@@ -13,6 +13,7 @@ namespace CreditCardApplications.Tests
 
             var sut = new CreditCardApplicationEvaluator(mockValidator.Object);
 
+
             var application = new CreditCardApplication { GrossAnnualIncome = 100000 };
 
             CreditCardApplicationDecision decision = sut.Evaluate(application);
