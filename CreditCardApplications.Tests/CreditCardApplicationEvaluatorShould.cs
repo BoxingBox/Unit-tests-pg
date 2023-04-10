@@ -37,7 +37,7 @@ namespace CreditCardApplications.Tests
         }
 
         [Fact]
-        public void ReferYoungApplicationsDuplicate()
+        public void ReferYoungApplicationsDuplicateNumber()
         {
             Mock<IFrequentFlyerNumberValidator> mockValidator =
                 new Mock<IFrequentFlyerNumberValidator>();
